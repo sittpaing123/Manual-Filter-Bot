@@ -1,0 +1,65 @@
+{
+    "name": "Manual Filter Bot",
+    "description": "An manual filter bot using MongoDB.",
+    "stack": "container",
+    "keywords": [
+      "telegram",
+      "manual-filter",
+      "filter",
+      "best",
+      "sri-lanka",
+      "pyrogram"
+    ],
+    "website": "https://github.com/Hansaka-Anuhas-1/Manual-Filter-Bot",
+    "repository": "https://github.com/Hansaka-Anuhas-1/Manual-Filter-Bot",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token.",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": true
+        },
+        "ADMINS": {
+            "description": "Username or ID of Admin. Separate multiple Admins by space.",
+            "required": true
+        },
+        "PICS": {
+            "description": "Add some telegraph link of pictures.",
+            "required": false
+        },
+        "LOG_CHANNEL": {
+            "description": "Bot Logs. Give a channel id with -100xxxxxxx",
+            "required": true
+        },
+        "DATABASE_URI": {
+            "description": "MongoDB URI. Get this value from https://www.mongodb.com",
+            "required": true
+        },
+        "DATABASE_NAME": {
+            "description": "Name of the database in MongoDB. Defaults to Cluster0",
+            "value": "Cluster0",
+            "required": false
+        },
+        "COLLECTION_NAME": {
+            "description": "Name of the collections. Defaults to Telegram_Filters. If you are using the same database, then use different collection name for each bot.",
+            "value": "Telegram_Filters",
+            "required": false
+        }
+    },
+    "addons": [],
+    "buildpacks": [{
+        "url": "heroku/python"
+    }],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
