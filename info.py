@@ -36,6 +36,7 @@ DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_Filters')
 DATABASE_NAME2 = environ.get('DATABASE_NAME2', "Cluster0")
+TG_USER_SESSION = environ.get("TG_USER_SESSION", "")
 
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
