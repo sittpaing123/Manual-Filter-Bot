@@ -2,37 +2,37 @@
 import os
 import logging
 from logging.handlers import RotatingFileHandler
-
+from info import BOT_TOKEN, APP_ID, API_HASH, DATABASE_URI, DATABASE_NAME2, ADMINS, TG_USER_SESSION
 
 # Get a bot token from botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+TG_BOT_TOKEN = BOT_TOKEN
 
 # Get from my.telegram.org (or @UseTGXBot)
-APP_ID = int(os.environ.get("APP_ID", ""))
+APP_ID = APP_ID
 
 # Get from my.telegram.org (or @UseTGXBot)
-API_HASH = os.environ.get("API_HASH", "")
+API_HASH = API_HASH
 
 # Generate a user session string 
-TG_USER_SESSION = os.environ.get("TG_USER_SESSION", "")
+TG_USER_SESSION = TG_USER_SESSION
 
 # Database URL from https://cloud.mongodb.com/
-DATABASE_URI = os.environ.get("DATABASE_URI", "")
+DATABASE_URI = DATABASE_URI 
 
 # Your database name from mongoDB
-DATABASE_NAME = os.environ.get("DATABASE_NAME", "")
+DATABASE_NAME = DATABASE_NAME2
 
 # ID of users that can use the bot commands
-AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "").split())
+AUTH_USERS = ADMINS
 
 # Should bot search for document files in channels
 DOC_SEARCH = os.environ.get("DOC_SEARCH", "yes").lower()
 
 # Should bot search for video files in channels
-VID_SEARCH = os.environ.get("VID_SEARCH", "no").lower()
+VID_SEARCH = os.environ.get("VID_SEARCH", "yes").lower()
 
 # Should bot search for music files in channels
-MUSIC_SEARCH = os.environ.get("MUSIC_SEARCH", "no").lower()
+MUSIC_SEARCH = os.environ.get("MUSIC_SEARCH", "yes").lower()
 
 
 
