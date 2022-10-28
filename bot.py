@@ -17,7 +17,7 @@ from config import (
     TG_BOT_WORKERS
 )
 
-from user import User
+
 
 
 # Get logging configurations
