@@ -8,6 +8,10 @@
       "filter",
       "best",
       "sri-lanka",
+      "Auto",
+      "Filter",
+      "Telegram Bot",
+      "TroJanzHEX",
       "pyrogram"
     ],
     "website": "https://github.com/Hansaka-Anuhas-1/Manual-Filter-Bot",
@@ -29,6 +33,10 @@
             "description": "Username or ID of Admin. Separate multiple Admins by space.",
             "required": true
         },
+        "AUTH_USERS": {
+            "description": "ID of users that can use the bot commands",
+            "value": ""
+        },
         "PICS": {
             "description": "Add some telegraph link of pictures.",
             "required": false
@@ -42,9 +50,17 @@
             "required": true
         },
         "DATABASE_NAME": {
-            "description": "Name of the database in MongoDB. Defaults to Cluster0",
-            "value": "Cluster0",
+            "description": "Name of the database in MongoDB. Defaults to Cluster1",
+            "value": "Cluster1",
             "required": false
+        },
+        "TG_USER_SESSION": {
+            "description": "A pyrogram user session string. Generate from https://repl.it/@prgofficial/String-Gen",
+            "value": ""
+        },
+        "DATABASE_NAME2": {
+            "description": "Your database name from mongoDB. ( Default will 'Cluster0' )",
+            "value": "Cluster0"
         },
         "COLLECTION_NAME": {
             "description": "Name of the collections. Defaults to Telegram_Filters. If you are using the same database, then use different collection name for each bot.",
