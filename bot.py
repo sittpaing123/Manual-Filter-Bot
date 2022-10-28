@@ -1,25 +1,6 @@
 import logging
 import logging.config
 
-
-from pyrogram import (
-    Client,
-    __version__
-)
-
-from config import (
-    API_HASH,
-    APP_ID,
-    LOGGER,
-    AUTH_USERS,
-    TG_BOT_SESSION,
-    TG_BOT_TOKEN,
-    TG_BOT_WORKERS
-)
-
-from user import User
-
-
 # Get logging configurations
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
@@ -36,21 +17,18 @@ from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
 
 class Bot(Client):
-    USER: User = None
-    USER_ID: int = None
 
     def __init__(self):
-        super().__init__(            
+        super().__init__(
             name=SESSION,
-            api_id=API_ID, 
+            api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,
             workers=50,
             plugins={"root": "plugins"},
             sleep_threshold=5,
         )
-            
-    
+
     async def start(self):
         b_users, b_chats = await db.get_banned()
         temp.BANNED_USERS = b_users
@@ -63,20 +41,11 @@ class Bot(Client):
         temp.B_NAME = me.first_name
         self.username = '@' + me.username
         logging.info(f"{me.first_name} with for Pyrogram v{__version__} (Layer {layer}) started on {me.username}.")
-        logging.info(LOG_STR)              
-        usr_bot_me = await self.get_me()
-        self.set_parse_mode("html")
-        self.LOGGER(__name__).info(
-            f"@{usr_bot_me.username}  started!\n\n"
-            f"Add @{usr_bot_me.username} as admin with all rights in your required channels\n\n"
-        )
-        AUTH_USERS.add(680815375)
-        self.USER, self.USER_ID = await User().start()
-
+        logging.info(LOG_STR)
 
     async def stop(self, *args):
         await super().stop()
-        self.LOGGER(__name__).info("Bot stopped. Bye.")
+        logging.info("Bot stopped. Bye.")
     
     async def iter_messages(
         self,
@@ -120,9 +89,3 @@ class Bot(Client):
 
 app = Bot()
 app.run()
-
-
-
-
-
-
