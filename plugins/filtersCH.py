@@ -18,7 +18,7 @@ from pyrogram.types import (
     CallbackQuery
 )
 
-from bot import Bot
+from bot2 import Bot
 from script import script
 from database.mdb import searchquery
 from plugins.channel import deleteallfilters
