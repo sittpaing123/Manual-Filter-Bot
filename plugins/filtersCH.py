@@ -19,7 +19,7 @@ from pyrogram.types import (
 )
 
 from bot2 import Bot
-from script import script
+
 from database.mdb import searchquery
 from plugins.channel import deleteallfilters
 from config import AUTH_USERS
