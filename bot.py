@@ -44,7 +44,6 @@ class Bot(Client):
             TG_BOT_SESSION,
             name=SESSION,
             api_id=API_ID, 
-            api_id=APP_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,
             workers=50,
