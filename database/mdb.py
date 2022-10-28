@@ -9,11 +9,11 @@ import pymongo
 from pymongo.errors import DuplicateKeyError
 from marshmallow.exceptions import ValidationError
 
-from config import DATABASE_URI, DATABASE_NAME
+from config import DATABASE_URI, DATABASE_NAME2
 
 
 myclient = pymongo.MongoClient(DATABASE_URI)
-mydb = myclient[DATABASE_NAME]
+mydb = myclient[DATABASE_NAME2]
 
 
 
