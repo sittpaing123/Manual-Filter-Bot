@@ -40,8 +40,7 @@ class Bot(Client):
     USER_ID: int = None
 
     def __init__(self):
-        super().__init__(
-            TG_BOT_SESSION,
+        super().__init__(            
             name=SESSION,
             api_id=API_ID, 
             api_hash=API_HASH,
