@@ -2,7 +2,7 @@
 import os
 import logging
 from logging.handlers import RotatingFileHandler
-from info import BOT_TOKEN, APP_ID, API_HASH, DATABASE_URI, DATABASE_NAME2, ADMINS, TG_USER_SESSION
+from info import BOT_TOKEN, APP_ID, API_HASH, DATABASE_URI, DATABASE_NAME2, AUTH_USERS, TG_USER_SESSION
 
 # Get a bot token from botfather
 TG_BOT_TOKEN = BOT_TOKEN
@@ -23,7 +23,7 @@ DATABASE_URI = DATABASE_URI
 DATABASE_NAME = DATABASE_NAME2
 
 # ID of users that can use the bot commands
-AUTH_USERS = ADMINS
+AUTH_USERS = AUTH_USERS
 
 # Should bot search for document files in channels
 DOC_SEARCH = os.environ.get("DOC_SEARCH", "yes").lower()
