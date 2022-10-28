@@ -75,11 +75,9 @@ class Bot(Client):
         self.USER, self.USER_ID = await User().start()
 
 
-
-
     async def stop(self, *args):
         await super().stop()
-        logging.info("Bot stopped. Bye.")
+        self.LOGGER(__name__).info("Bot stopped. Bye.")
     
     async def iter_messages(
         self,
