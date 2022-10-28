@@ -17,7 +17,7 @@ API_HASH = API_HASH
 TG_USER_SESSION = TG_USER_SESSION
 
 # Database URL from https://cloud.mongodb.com/
-DATABASE_URI = DATABASE_URI 
+DATABASE_URI = DATABASE_URI
 
 # Your database name from mongoDB
 DATABASE_NAME = DATABASE_NAME2
