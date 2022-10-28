@@ -2,13 +2,13 @@
 import os
 import logging
 from logging.handlers import RotatingFileHandler
-from info import BOT_TOKEN, APP_ID, API_HASH, DATABASE_URI, DATABASE_NAME2, AUTH_USERS, TG_USER_SESSION
+from info import BOT_TOKEN, API_ID, API_HASH, DATABASE_URI, DATABASE_NAME2, AUTH_USERS, TG_USER_SESSION
 
 # Get a bot token from botfather
 TG_BOT_TOKEN = BOT_TOKEN
 
 # Get from my.telegram.org (or @UseTGXBot)
-APP_ID = APP_ID
+APP_ID = API_ID
 
 # Get from my.telegram.org (or @UseTGXBot)
 API_HASH = API_HASH
