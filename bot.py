@@ -51,7 +51,7 @@ class Bot(Client):
             plugins={"root": "plugins"},
             sleep_threshold=5,
         )
-            self.LOGGER = LOGGER
+            
     
     async def start(self):
         b_users, b_chats = await db.get_banned()
